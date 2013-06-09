@@ -5,7 +5,7 @@ This uses flask-security, SQLAlchemy, reCaptcha, bcrypt a few more libraries.
 We usually use a mysql database.
 
 Steps : 
-======
+-------
 
 1. Clone this repo, remove the .git files using the following command so that you can push your new project to a different repo.
 '''
