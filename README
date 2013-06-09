@@ -1,25 +1,31 @@
 Sample Flask App
+================
 
 This uses flask-security, SQLAlchemy, reCaptcha, bcrypt a few more libraries.
 We usually use a mysql database.
 
 Steps : 
+======
 
-Clone this repo, remove the .git files using the following command so that you can push your new project to a different repo.
-
+1. Clone this repo, remove the .git files using the following command so that you can push your new project to a different repo.
+'''
 rm -rf `find ./ -type d -name .git`
+'''
 
-Change the name, requirements, config according to your needs and start your new project!
+2. Change the name, requirements, config according to your needs and start your new project!
 
-To install the requirements do 
-
+3. To install the requirements do 
+'''
 pip install -r requirements.txt
+''''
 
-To run the app locally, do
-
+4. To run the app locally, do
+'''
 python runserver.py
+'''
 
-To deploy on server we reccommend using 'uWSGI' and 
+5. To deploy on server we reccommend using 'uWSGI' and 'nginx'
 
 Happy Coding!
 Team MakkarLabs
+makkarlabs.in
