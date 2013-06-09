@@ -10,16 +10,17 @@ Steps :
 1. Clone this repo, remove the .git files using the following command so that you can push your new project to a different repo.
 ```rm -rf `find ./ -type d -name .git` ```
 
-2. Change the name, requirements, config according to your needs and start your new project!
+2. Copy default_config.py file to config.py and make your changes.
 
-3. To install the requirements do 
+3. Change the name, requirements according to your needs and start your new project!
+
+4. To install the requirements do 
 ``` pip install -r requirements.txt```
 
-4. To run the app locally, do
+5. To run the app locally, do
 ``` python runserver.py ```
 
-
-5. To deploy on server we reccommend using 'uWSGI' and 'nginx'
+6. To deploy on server we reccommend using 'uWSGI' and 'nginx'
 
 Happy Coding!
 Team MakkarLabs
