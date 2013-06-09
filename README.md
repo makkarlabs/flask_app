@@ -22,6 +22,6 @@ Steps :
 
 6. To deploy on server we reccommend using 'uWSGI' and 'nginx'
 
-Happy Coding!
-Team MakkarLabs
+Happy Coding!  
+Team MakkarLabs  
 makkarlabs.in
