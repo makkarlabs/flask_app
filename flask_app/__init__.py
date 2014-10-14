@@ -15,8 +15,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + config.DB_USERNAME + ':' + 
 db = SQLAlchemy(app)
 mail = Mail(app)
 
-from flask_app import views
-from flask_app import models, forms
+from {{ flask_app.name }} import views
+from {{ flask_app.name }} import models, forms
 #import hedge_app.tasks
 
 #Uncomment on server

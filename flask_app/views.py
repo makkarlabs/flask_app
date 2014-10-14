@@ -3,8 +3,8 @@ from flask import Flask, jsonify, flash, render_template, request, redirect, url
 from flask.ext.security import login_required, current_user, login_user
 
 #App Imports
-from flask_app import app, forms, db
-from flask_app.models import User
+from {{ flask_app.name }} import app, forms, db
+from {{ flask_app.name }}.models import User
 import config
 
 #Python Imports
