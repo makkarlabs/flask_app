@@ -1,5 +1,5 @@
 #Logging
-LOG_FILE_LOC = '{% flask_app.name %}/logs/error.log'
+LOG_FILE_LOC = '{{ flask_app.name }}/logs/error.log'
 
 #Database
 DB_USERNAME = ''

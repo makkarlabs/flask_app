@@ -3,7 +3,7 @@ from wtforms import TextField, TextAreaField, SelectField, DecimalField, Integer
 from flask_security.forms import RegisterForm, LoginForm
 from wtforms.validators import Required, Regexp, Length, Email, URL, EqualTo, NumberRange
 from flask_wtf import RecaptchaField
-from {% flask_app.name %} import config
+from {{ flask_app.name }} import config
 
 class ExtendedRegisterForm(RegisterForm):
     first_name = TextField('First Name', [Required()])

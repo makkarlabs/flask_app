@@ -1,4 +1,4 @@
-from {% flask_app %} import db, app
+from {{ flask_app }} import db, app
 from flask.ext.security import Security, SQLAlchemyUserDatastore, \
      UserMixin, RoleMixin
 from flask_app.forms import ExtendedRegisterForm

@@ -1,22 +1,20 @@
-import os
-from jinja2 import Environment, FileSystemLoader, PackageLoader
+import sys
+from jinja2 import Environment, FileSystemLoader
 
-fileNames = ['flask_app/forms.py', 'flask_app/models.py', 'flask_app/views.py', 'flask_app/default_config.py', ]#'flask_app/__init__.py']
+appName = 'flask_app'
+fileNames = ['__init__.py', 'forms.py', 'models.py', 'views.py', 'default_config.py']
 
-PATH = os.path.dirname(os.path.abspath(__file__))
 
-env = Environment(loader=PackageLoader('flask_app', 'flask_app'))
+def fileWrite(appName, fileName):
+    env = Environment(loader=FileSystemLoader(appName))
+    template = env.get_template(fileName)
+    output = template.render(flask_app={'name': appName})
+    with open(appName + '/' + fileName, 'wb') as f:
+        f.write(bytes(output, 'UTF-8'))
 
-def render_template(template_filename, context):
-    return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
-
-def createProject():
-    name = 'app_name'
-    for i in fileNames:
-        template = env.get_template(i)
-        temp = template.render(flask_app={'name': name})
-        print temp
-    #newFiles = [fileNames, ]
+#    print(output)
 
 if __name__ == "__main__":
-    createProject()
+    appName = sys.argv[1]
+    for i in fileNames:
+        fileWrite(appName, i)
